@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <div>
@@ -25,17 +27,52 @@ const NavBar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Home</a>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  Home
+                </NavLink>
+                <NavLink
+                  to="allToys"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  All Toys
+                </NavLink>
               </li>
               <li>
-                <a>My Toys</a>
+                <NavLink
+                  to="myToys"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  My Toys
+                </NavLink>
               </li>
-
               <li>
-                <a>Add Toys</a>
+                <NavLink
+                  to="addToys"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  Add Toys
+                </NavLink>
               </li>
               <li>
-                <a>Blogs</a>
+                <NavLink
+                  to="blogs"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  Blogs
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -44,13 +81,42 @@ const NavBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="allToys"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                All Toys
+              </NavLink>
             </li>
             <li>
-              <a>Add Toys</a>
+              <NavLink
+                to="myToys"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                My Toys
+              </NavLink>
             </li>
             <li>
-              <a>Blogs</a>
+              <NavLink
+                to="addToys"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Add Toys
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="blogs"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Blogs
+              </NavLink>
             </li>
           </ul>
         </div>
