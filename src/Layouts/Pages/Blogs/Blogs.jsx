@@ -8,69 +8,74 @@ const Blogs = () => {
         <div className="qna text-left text-2xl">
           <div className="border border-x-yellow-500 mt-2"></div>
           <h3 className="font-bold mt-8">
-            1. What is differences between uncontrolled and controlled
-            components.?
+            1.What is an access token and refresh token? How do they work and
+            where should we store them on the client-side?
           </h3>
 
           <h2>
-            In the context of a system or process, uncontrolled components refer
-            to elements that are not governed or regulated by any specific set
-            of rules, standards, or protocols. In contrast, controlled
-            components are those that are managed and governed by established
-            rules, regulations, or protocols.
+            {" "}
+            <span className="text-md font-bold text-orange-500">Ans: </span>
+            Access tokens and refresh tokens are commonly used in authentication
+            and authorization systems.
             <br />
-            Controlled components, on the other hand, are those that are managed
-            and regulated according to established standards or protocols.
-            Examples of controlled components might include the use of
-            standardized operating procedures, quality control measures, or
-            regulatory compliance frameworks.
+            Access Token: An access token is a credential that is used to
+            authenticate and authorize access to protected resources. It is
+            typically a string of characters that represents the identity and
+            permissions of a user or client application. Access tokens are
+            usually short-lived and have an expiration time.
+            <br />
+            Refresh Token: A refresh token is a credential used to obtain a new
+            access token without requiring the user to re-authenticate. Refresh
+            tokens have a longer expiration time compared to access tokens.
+          </h2>
+          <h3 className="font-bold mt-8">2.Compare SQL and NoSQL databases?</h3>
+          <h2>
+            <span className="text-md font-bold text-orange-500">Ans: </span>
+            SQL (Structured Query Language) and NoSQL (Not only SQL) are two
+            different types of database systems. Here is a comparison between
+            SQL and NoSQL databases:
+            <br />
+            SQL Databases: Structure: SQL databases follow a rigid, predefined
+            structure with tables, columns, and relationships defined by a
+            schema. Data Model: SQL databases use a relational data model, where
+            data is organized into tables with rows and columns.
+            <br />
+            NoSQL Databases: Flexibility: NoSQL databases offer flexible
+            schemas, allowing for dynamic and evolving data structures without
+            requiring a predefined schema. Data Model: NoSQL databases use
+            various data models, such as key-value, document, columnar, or
+            graph, based on the specific requirements of the application.
           </h2>
           <h3 className="font-bold mt-8">
-            2.How to validate React props using PropTypes?
+            3. What is express js? What is Nest JS ?
           </h3>
           <h2>
-            React provides a utility called PropTypes that can be used to
-            validate the type and presence of props passed to a component. Here
-            are the steps to validate React props using PropTypes. Import
-            PropTypes from the prop-types package at the top of your component
-            file: Define your component as usual, and declare a static propTypes
-            object at the bottom of your component file
+            <span className="text-md font-bold text-orange-500">Ans: </span>
+            Express.js: Express.js is a minimalist, flexible, and widely adopted
+            web application framework for Node.js. It provides a simple,
+            unopinionated approach to building web servers and APIs. Express.js
+            focuses on providing a lightweight and modular framework that allows
+            developers to define routes, handle HTTP requests, and manage
+            middleware.
+            <br />
+            NestJS: NestJS is a progressive, opinionated, and powerful web
+            application framework for Node.js. It is built with a focus on
+            scalability, maintainability, and the use of modern TypeScript
+            language features. NestJS follows the modular architecture pattern
+            and uses decorators, providers, and modules to organize the
+            codebase.
           </h2>
           <h3 className="font-bold mt-8">
-            3. Tell us the difference between nodejs and express js?
+            4. What is MongoDB aggregate and how does it work?
           </h3>
           <h2>
-            Node.js and Express.js are two distinct technologies that are often
-            used together to build server-side applications. Here an overview of
-            the differences between the two:
-            <br />
-            Node.js: Node.js is a runtime environment for executing JavaScript
-            code outside of a web browser. It is built on the V8 JavaScript
-            engine from Google Chrome and allows developers to run JavaScript
-            code on the server side. Node.js provides an event-driven,
-            non-blocking I/O model that enables efficient and scalable
-            server-side applications. Node.js has a vast ecosystem of modules
-            and packages that developers can use to build their applications.
-            Node.js is often used for building backend services, command-line
-            tools, and real-time applications.
-            <br />
-            <br />
-            Express.js: Express.js is a popular web framework for Node.js that
-            simplifies the process of building server-side applications. It
-            provides a set of features for building web applications, such as
-            routing, middleware, and templates. Express.js is lightweight and
-            unopinionated, which means that it provides developers with a lot of
-            flexibility in how they structure their applications.
-          </h2>
-          <h3 className="font-bold mt-8">
-            4. What is a custom hook, and why will you create a custom hook?
-          </h3>
-          <h2>
-            A custom hook in React is a reusable function that contains some
-            stateful or stateless logic and can be used across multiple
-            components. Custom hooks allow developers to abstract and reuse code
-            that is common across components, reducing code duplication and
-            improving maintainability.
+            <span className="text-md font-bold text-orange-500">Ans: </span>
+            In MongoDB, the aggregate function is used to perform advanced data
+            processing operations and analysis on the documents within a
+            collection. It allows you to perform various transformations,
+            filtering, grouping, and computations on the data. The aggregate
+            function uses a pipeline approach, where multiple stages are chained
+            together to form a sequence of operations.
           </h2>
         </div>
       </div>

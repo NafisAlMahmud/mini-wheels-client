@@ -11,7 +11,11 @@ const AboutUs = () => {
         </div>
         <div className="md:w-3/4">
           <h2 className="font-bold text-3xl text-left ">About Us</h2>
-          <p>
+          <p className="pt-8">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            necessitatibus! Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Labore, accusantium quia, quae eveniet deleniti alias culpa
+            consequatur distinctio sit, libero eius voluptatum quidem odio in!
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
             necessitatibus! Lorem ipsum, dolor sit amet consectetur adipisicing
             elit. Labore, accusantium quia, quae eveniet deleniti alias culpa

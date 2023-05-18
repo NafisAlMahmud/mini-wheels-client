@@ -1,4 +1,6 @@
 import AboutUs from "../AboutUs/AboutUs";
+import Gallery from "../Gallery/Gallery";
+import ToyCategory from "../ToyCategory/ToyCategory";
 
 const Home = () => {
   return (
@@ -23,6 +25,8 @@ const Home = () => {
         </div>
       </div>
       <AboutUs></AboutUs>
+      <Gallery></Gallery>
+      <ToyCategory></ToyCategory>
     </div>
   );
 };

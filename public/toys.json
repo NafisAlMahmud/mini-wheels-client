@@ -1,0 +1,44 @@
+{
+  "toys": [
+    {
+      "name": "Remote Control Sports Car",
+      "price": 29.99,
+      "rating": 4.5,
+      "description": "A sleek and fast remote control sports car for racing enthusiasts.",
+      "category": "car",
+      "subcategory": "remote control"
+    },
+    {
+      "name": "Balance Bike",
+      "price": 49.99,
+      "rating": 4.2,
+      "description": "A balance bike designed to help young children learn balance and coordination before transitioning to a pedal bike.",
+      "category": "bike",
+      "subcategory": "balance"
+    },
+    {
+      "name": "Construction Truck Set",
+      "price": 19.99,
+      "rating": 4.8,
+      "description": "A set of construction trucks including excavators, dump trucks, and bulldozers, perfect for imaginative play.",
+      "category": "truck",
+      "subcategory": "construction"
+    },
+    {
+      "name": "RC Monster Truck",
+      "price": 39.99,
+      "rating": 4.6,
+      "description": "A rugged remote control monster truck that can conquer any terrain.",
+      "category": "truck",
+      "subcategory": "remote control"
+    },
+    {
+      "name": "Pedal Go-Kart",
+      "price": 99.99,
+      "rating": 4.4,
+      "description": "A pedal-powered go-kart that provides an exciting and active outdoor experience for kids.",
+      "category": "car",
+      "subcategory": "pedal-powered"
+    }
+  ]
+}
