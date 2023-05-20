@@ -23,14 +23,19 @@ const MyToys = () => {
               <th>Name</th>
               <th>Description</th>
               <th>Price</th>
-              <th>Quantity</th>
               <th></th>
+              <th>Quantity</th>
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
             {toys.map((toy) => (
-              <MyToysTable key={toy._id} toy={toy}></MyToysTable>
+              <MyToysTable
+                key={toy._id}
+                toys={toys}
+                setToys={setToys}
+                toy={toy}
+              ></MyToysTable>
             ))}
           </tbody>
         </table>

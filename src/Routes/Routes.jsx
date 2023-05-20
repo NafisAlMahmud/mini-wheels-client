@@ -8,6 +8,8 @@ import AllToys from "../Layouts/Pages/AllToys/AllToys";
 import ErrorPage from "../Layouts/Pages/Error/ErrorPages";
 import Login from "../Layouts/Pages/Login/Login";
 import Signup from "../Layouts/Pages/Signup/Signup";
+import UpdateToys from "../Layouts/Pages/UpdateToys/UpdateToys";
+import AllSingleToys from "../Layouts/Pages/AllSingleToys/AllSingleToys";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,18 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <Signup></Signup>,
+      },
+      {
+        path: "toys/:id",
+        element: <UpdateToys></UpdateToys>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/toys/${params.id}`),
+      },
+      {
+        path: "/singleToys/:id",
+        element: <AllSingleToys></AllSingleToys>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/singleToys/${params.id}`),
       },
     ],
   },

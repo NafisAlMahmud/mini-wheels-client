@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const MyToysTable = ({ toy }) => {
+const MyToysTable = ({ toy, toys, setToys }) => {
   const {
     _id,
     price,
@@ -9,17 +11,43 @@ const MyToysTable = ({ toy }) => {
     quantity,
     description,
     toysname,
-    photo,
+    img,
   } = toy;
 
-  const handleDelete = () => {};
+  const handleDelete = () => {
+    console.log(_id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/addToys/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your toy has been deleted.", "success");
+              const remaining = toys.filter((to) => to._id !== _id);
+              setToys(remaining);
+            }
+          });
+      }
+    });
+  };
   return (
     <tr>
       <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">
             <div className="rounded w-44 h-28">
-              <img src={photo} alt="Avatar Tailwind CSS Component" />
+              <img src={img} alt="Avatar Tailwind CSS Component" />
             </div>
           </div>
           <div>
@@ -34,17 +62,17 @@ const MyToysTable = ({ toy }) => {
 
       <td>{quantity}</td>
 
-      <th className="pl-8">
-        <button onClick={() => handleDelete(_id)} className="btn  btn-outline">
+      <td>
+        <button
+          onClick={() => handleDelete(_id)}
+          className="btn bg-red-600 mr-4  btn-outline"
+        >
           Delete
         </button>
-        <button
-          //   onClick={() => handleDelete(_id)}
-          className="btn  btn-outline"
-        >
-          Edit
-        </button>
-      </th>
+        <Link to={`/toys/${_id}`}>
+          <button>Edit</button>
+        </Link>
+      </td>
     </tr>
   );
 };

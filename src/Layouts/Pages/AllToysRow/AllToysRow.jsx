@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AllToysRow = ({ myToy }) => {
   const {
@@ -32,15 +33,9 @@ const AllToysRow = ({ myToy }) => {
       <td>{quantity}</td>
 
       <th className="pl-8">
-        <button onClick={() => handleDelete(_id)} className="btn  btn-outline">
-          Delete
-        </button>
-        <button
-          //   onClick={() => handleDelete(_id)}
-          className="btn  btn-outline"
-        >
-          Edit
-        </button>
+        <Link to={`/singleToys/${_id}`}>
+          <button>details</button>
+        </Link>
       </th>
     </tr>
   );
