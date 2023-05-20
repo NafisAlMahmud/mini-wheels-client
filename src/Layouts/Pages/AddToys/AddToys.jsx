@@ -14,7 +14,8 @@ const AddToys = () => {
 
     const category = form.category.value;
     const description = form.description.value;
-    const photo = form.img.value;
+    const img = form.img.value;
+    const email = form.email.value;
 
     const newToys = {
       name,
@@ -24,6 +25,7 @@ const AddToys = () => {
       description,
       toysname,
       img,
+      email,
       quantity,
     };
     console.log(newToys);
@@ -167,6 +169,19 @@ const AddToys = () => {
                   type="text"
                   name="img"
                   placeholder="Photo URL"
+                  className="input input-bordered w-full"
+                />
+              </label>
+            </div>
+            <div className="form-control ">
+              <label className="label">
+                <span className="label-text">Email </span>
+              </label>
+              <label className="input-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="email"
                   className="input input-bordered w-full"
                 />
               </label>

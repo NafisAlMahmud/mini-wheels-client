@@ -1,8 +1,17 @@
-import { useLoaderData } from "react-router-dom";
 import MyToysTable from "../MyToysTable/MyToysTable";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const MyToys = () => {
-  const myToys = useLoaderData();
+  const { user } = useContext(AuthContext);
+  const [toys, setToys] = useState([]);
+  useEffect(() => {
+    fetch(`http://localhost:5000/addToys/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setToys(data);
+      });
+  }, [user]);
   return (
     <div className="mt-20">
       {/* <h2>Your Bookings {bookings.length}</h2> */}
@@ -12,7 +21,6 @@ const MyToys = () => {
           <thead>
             <tr>
               <th>Name</th>
-
               <th>Description</th>
               <th>Price</th>
               <th>Quantity</th>
@@ -21,8 +29,8 @@ const MyToys = () => {
           </thead>
           <tbody>
             {/* row 1 */}
-            {myToys.map((myToy) => (
-              <MyToysTable key={myToys._id} myToy={myToy}></MyToysTable>
+            {toys.map((toy) => (
+              <MyToysTable key={toy._id} toy={toy}></MyToysTable>
             ))}
           </tbody>
         </table>

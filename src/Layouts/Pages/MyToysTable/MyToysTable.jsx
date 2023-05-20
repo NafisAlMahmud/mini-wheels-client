@@ -1,6 +1,6 @@
 import React from "react";
 
-const MyToysTable = ({ myToy }) => {
+const MyToysTable = ({ toy }) => {
   const {
     _id,
     price,
@@ -10,7 +10,7 @@ const MyToysTable = ({ myToy }) => {
     description,
     toysname,
     photo,
-  } = myToy;
+  } = toy;
 
   const handleDelete = () => {};
   return (
@@ -31,6 +31,7 @@ const MyToysTable = ({ myToy }) => {
 
       <td>{description}</td>
       <td>{price}</td>
+
       <td>{quantity}</td>
 
       <th className="pl-8">
