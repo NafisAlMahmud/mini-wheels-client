@@ -1,25 +1,27 @@
-- First I visit some other resturent website and gain some good design idea about how chefs/resturent website looks
+- First I visit some other resturent website and gain some good design idea about how toy website looks
 - Then make choose a good design
 - Choose 2 extra features for my website
 - Make sure my website look clean
 - Then create a local server in localhost:5000
 - Make a json file for chefs
-- Make some signature recipe for individual chefs
+- Make some signature toy in tab for individual category
 - Then I move oon to clinte site
 - And make a good folder stuctures for my website
 - Choose a css framework for my website.
 - Load my API data from server and fetch it.
-- Then show the data by using map
+- Then show the data by using map and serch filter
 - Choose a image for banner section and a text .
 - Then make a about us section and give a good description an da image for my website.
-- Then show 6 chefs and their experince, rating, review and a view recipe buttons
+- Then show 6 toy and their rating, review and a view recipe buttons
 - Then make a Our Partners section and give some popular brands logo
 - Last but not least make a good and simple footer for my website.
 - Then make a details page for individual chefs and their recipe.
 - Show all the recipes and their ingredients, rating and review
 - Then make a project file in firebase for authentication for my website.
 - Make a sign up and login components for my website,
-- Give them a good design
+- Give them a good design and a good ui
 - Make the details components privet route
 - Deploy server in versel and load API.
-- Deploy client site in netlify.
+- Deploy client site in firebase.and deploy server in railway
+
+- live site link: https://mini-wheels-fb5c7.web.app/
