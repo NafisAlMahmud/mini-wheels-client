@@ -18,8 +18,8 @@ const AllToys = () => {
   // Function to handle the search
   const handleSearch = () => {
     const filteredResults = myToys.filter((toy) => {
-      const toyName = toy.toysname || ""; // Set toyName to an empty string if toy.name is undefined or null
-      const query = searchQuery || ""; // Set query to an empty string if searchQuery is undefined or null
+      const toyName = toy.toysname || "";
+      const query = searchQuery || "";
       return toyName.toLowerCase().includes(query.toLowerCase());
     });
     setFilteredToys(filteredResults);
@@ -42,7 +42,7 @@ const AllToys = () => {
             Search
           </button>
         </div>
-        {/* <h2>Your Bookings {bookings.length}</h2> */}
+
         <div className="overflow-x-auto w-full">
           <table className="table w-full">
             {/* head */}
@@ -58,12 +58,10 @@ const AllToys = () => {
             </thead>
             <tbody>
               {searchQuery && filteredToys.length > 0
-                ? // Render the filtered toys when there is a search query and filtered results
-                  filteredToys.map((myToy) => (
+                ? filteredToys.map((myToy) => (
                     <AllToysRow key={myToy._id} myToy={myToy} />
                   ))
-                : // Render all toys when there is no search query or no filtered results
-                  myToys
+                : myToys
                     .slice(0, 20)
                     .map((myToy) => (
                       <AllToysRow key={myToy._id} myToy={myToy} />
