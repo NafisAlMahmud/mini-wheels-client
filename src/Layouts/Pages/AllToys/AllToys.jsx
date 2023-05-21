@@ -61,11 +61,9 @@ const AllToys = () => {
                 ? filteredToys.map((myToy) => (
                     <AllToysRow key={myToy._id} myToy={myToy} />
                   ))
-                : myToys
-                    .slice(0, 20)
-                    .map((myToy) => (
-                      <AllToysRow key={myToy._id} myToy={myToy} />
-                    ))}
+                : myToys.map((myToy) => (
+                    <AllToysRow key={myToy._id} myToy={myToy} />
+                  ))}
             </tbody>
           </table>
         </div>
