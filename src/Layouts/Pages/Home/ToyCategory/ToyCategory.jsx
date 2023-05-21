@@ -7,7 +7,9 @@ const ToyCategory = () => {
   const [toys, setToys] = useState([]);
   const [activeTab, setActiveTab] = useState("car");
   useEffect(() => {
-    fetch(`http://localhost:5000/allToys/${activeTab}`)
+    fetch(
+      `https://mini-wheels-server-nafisalmahmud.vercel.app/allToys/${activeTab}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setToys(data.slice(0, 3));

@@ -18,11 +18,12 @@ const Home = () => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <h1 className="mb-5 text-5xl font-bold">WellCome To Mini Wheels</h1>
             <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Welcome to our enchanting toy shop! Discover a wonderland filled
+              with whimsical treasures. From cuddly teddy bears to captivating
+              puzzles, let your imagination soar. Find joy in every delightful
+              plaything. Happy shopping!
             </p>
             <button className="btn btn-primary">Get Started</button>
           </div>

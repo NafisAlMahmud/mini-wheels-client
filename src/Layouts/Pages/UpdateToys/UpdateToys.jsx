@@ -34,7 +34,7 @@ const UpdateToys = () => {
     console.log(newToys);
 
     // send data to server
-    fetch(`http://localhost:5000/toys/${_id}`, {
+    fetch(`https://mini-wheels-server-nafisalmahmud.vercel.app/toys/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -28,7 +28,8 @@ const router = createBrowserRouter([
       {
         path: "/allToys",
         element: <AllToys></AllToys>,
-        loader: () => fetch("http://localhost:5000/addToys"),
+        loader: () =>
+          fetch("https://mini-wheels-server-nafisalmahmud.vercel.app/addToys"),
       },
       {
         path: "/myToys",
@@ -58,7 +59,9 @@ const router = createBrowserRouter([
         path: "toys/:id",
         element: <UpdateToys></UpdateToys>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(
+            `https://mini-wheels-server-nafisalmahmud.vercel.app/toys/${params.id}`
+          ),
       },
       {
         path: "/singleToys/:id",
@@ -68,7 +71,9 @@ const router = createBrowserRouter([
           </PrivetRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/singleToys/${params.id}`),
+          fetch(
+            `https://mini-wheels-server-nafisalmahmud.vercel.app/singleToys/${params.id}`
+          ),
       },
     ],
   },

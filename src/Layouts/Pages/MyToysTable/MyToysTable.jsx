@@ -26,9 +26,12 @@ const MyToysTable = ({ toy, toys, setToys }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/addToys/${_id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://mini-wheels-server-nafisalmahmud.vercel.app/addToys/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

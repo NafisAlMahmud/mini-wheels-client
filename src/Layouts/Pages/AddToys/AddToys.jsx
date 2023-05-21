@@ -33,7 +33,7 @@ const AddToys = () => {
     console.log(newToys);
 
     // send data to server
-    fetch("http://localhost:5000/addToys", {
+    fetch("https://mini-wheels-server-nafisalmahmud.vercel.app/addToys", {
       method: "POST",
       headers: {
         "content-type": "application/json",
