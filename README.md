@@ -21,7 +21,7 @@
 - Make a sign up and login components for my website,
 - Give them a good design and a good ui
 - Make the details components privet route
-- Deploy server in versel and load API.
+- Deploy server in railway and load API.
 - Deploy client site in firebase.and deploy server in railway
 
 - live site link: https://mini-wheels-fb5c7.web.app/
