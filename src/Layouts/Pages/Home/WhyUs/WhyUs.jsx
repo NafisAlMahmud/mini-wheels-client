@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const WhyUs = () => {
+  // aasssd
   useEffect(() => {
     AOS.init();
   }, []);
