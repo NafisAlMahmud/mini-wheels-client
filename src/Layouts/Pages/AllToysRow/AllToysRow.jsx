@@ -28,13 +28,13 @@ const AllToysRow = ({ myToy }) => {
         </div>
       </td>
 
-      <td>{description}</td>
+      <td>{description.slice(10)}...</td>
       <td>{price}</td>
       <td>{quantity}</td>
 
       <th className="pl-8">
         <Link to={`/singleToys/${_id}`}>
-          <button>details</button>
+          <button className="btn btn-outline">details</button>
         </Link>
       </th>
     </tr>

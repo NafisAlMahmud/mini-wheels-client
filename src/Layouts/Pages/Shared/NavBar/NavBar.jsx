@@ -85,7 +85,15 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl lg:pl-10">daisyUI</a>
+          <div>
+            <Link to="/">
+              <img
+                className="w-28"
+                src="https://i.ibb.co/1q9Dr2b/Picsart-23-05-21-11-53-31-275-1-removebg-preview.png"
+                alt=""
+              />
+            </Link>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -105,14 +113,6 @@ const NavBar = () => {
             </li>
             <li>
               <NavLink
-                to="myToys"
-                className={({ isActive }) => (isActive ? "active" : "default")}
-              >
-                My Toys
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
                 to="addToys"
                 className={({ isActive }) => (isActive ? "active" : "default")}
               >
@@ -127,6 +127,19 @@ const NavBar = () => {
                 Blogs
               </NavLink>
             </li>
+
+            {user && (
+              <li>
+                <NavLink
+                  to="myToys"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "default"
+                  }
+                >
+                  My Toys
+                </NavLink>
+              </li>
+            )}
           </ul>
         </div>
         <div className="navbar-end">
@@ -156,6 +169,7 @@ const NavBar = () => {
               {user && (
                 <span>
                   {user.displayName}
+
                   <button className="btn lg:ml-10" onClick={handleLogout}>
                     Sign out
                   </button>

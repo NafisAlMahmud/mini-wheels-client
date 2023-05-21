@@ -10,6 +10,7 @@ import Login from "../Layouts/Pages/Login/Login";
 import Signup from "../Layouts/Pages/Signup/Signup";
 import UpdateToys from "../Layouts/Pages/UpdateToys/UpdateToys";
 import AllSingleToys from "../Layouts/Pages/AllSingleToys/AllSingleToys";
+import PrivetRoutes from "../PrivateRoutes/PrivetRoutes";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/addToys",
-        element: <AddToys></AddToys>,
+        element: (
+          <PrivetRoutes>
+            <AddToys></AddToys>
+          </PrivetRoutes>
+        ),
       },
       {
         path: "/blogs",
@@ -57,7 +62,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/singleToys/:id",
-        element: <AllSingleToys></AllSingleToys>,
+        element: (
+          <PrivetRoutes>
+            <AllSingleToys></AllSingleToys>
+          </PrivetRoutes>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/singleToys/${params.id}`),
       },

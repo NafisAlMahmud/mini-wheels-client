@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
 import { updateProfile } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 
 const Signup = () => {
   const [error, setError] = useState("");
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleSignup = (event) => {
     event.preventDefault();
 
@@ -31,6 +32,7 @@ const Signup = () => {
     createUser(email, password).then((result) => {
       const loggedUser = result.user;
       console.log(error.message);
+      // navigate("/");
       updateUser(loggedUser, name, photo);
     });
     const updateUser = (user, name, photo) => {

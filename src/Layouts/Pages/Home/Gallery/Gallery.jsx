@@ -2,7 +2,13 @@ const Gallery = () => {
   return (
     <div>
       <h2 className="text-center text-4xl font-bold py-10">Gallery</h2>
-      <div className="grid grid-cols-3 mx-auto">
+      <div
+        className="grid grid-cols-3 mx-auto"
+        data-aos="fade-zoom-in"
+        data-aos-offset="200"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="600"
+      >
         <div>
           <img
             className="w-3/4 h-3/4 mx-auto"

@@ -1,8 +1,12 @@
+import useTitle from "../../../../hooks/useTitle";
 import AboutUs from "../AboutUs/AboutUs";
 import Gallery from "../Gallery/Gallery";
+import Partners from "../Partners/Partners";
 import ToyCategory from "../ToyCategory/ToyCategory";
+import WhyUs from "../WhyUs/WhyUs";
 
 const Home = () => {
+  useTitle("Home");
   return (
     <div>
       <div
@@ -27,6 +31,8 @@ const Home = () => {
       <AboutUs></AboutUs>
       <Gallery></Gallery>
       <ToyCategory></ToyCategory>
+      <WhyUs></WhyUs>
+      <Partners></Partners>
     </div>
   );
 };

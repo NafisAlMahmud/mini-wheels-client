@@ -1,66 +1,60 @@
+import { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import SingleTab from "../../SingleTab/SingleTab";
 
 const ToyCategory = () => {
-  return (
-    <div>
-      <Tabs>
-        <TabList className=" tabs tabs-boxed h-14">
-          <div className="mx-auto my-auto">
-            <Tab className="tab h-10">Cars</Tab>
-            <Tab className="tab h-10">Bikes</Tab>
-            <Tab className="tab h-10">Truck</Tab>
-          </div>
-        </TabList>
+  const [toys, setToys] = useState([]);
+  const [activeTab, setActiveTab] = useState("car");
+  useEffect(() => {
+    fetch(`http://localhost:5000/allToys/${activeTab}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setToys(data.slice(0, 3));
+      });
+  }, [activeTab]);
 
-        <TabPanel>
-          <div className="grid grid-cols-3">
-            <div>
-              <h2>Soprts Car</h2>
-            </div>
-            <div>
-              <h2>Racing Car</h2>
-            </div>
-            <div>
-              <h2>luxury car</h2>
-            </div>
-          </div>
-        </TabPanel>
-        <TabPanel>
-          <div className="card lg:card-side bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
-                alt="Album"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">New album is released!</h2>
-              <p>Click the button to listen on Spotiwhy app.</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Listen</button>
-              </div>
-            </div>
-          </div>
-        </TabPanel>
-        <TabPanel>
-          <div className="card lg:card-side bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
-                alt="Album"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">New album is released!</h2>
-              <p>Click the button to listen on Spotiwhy app.</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Listen</button>
-              </div>
-            </div>
-          </div>
-        </TabPanel>
-      </Tabs>
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+  };
+  return (
+    <div className="">
+      <h2 className="text-6xl font-bold text-yellow-600 text-center py-4">
+        Toys Collection
+      </h2>
+      <p className="w-2/3 text-center mx-auto py-4">
+        Welcome to Discovery Toys! Here you will find the best toddler toys
+        online that will help children enhance their developmental skills and
+        learn the best ways to interact with the world around them. Whether you
+        are looking for design builder toys, books, or exploratory toys, you
+        will find the perfect toy through one of the largest online toy stores
+        on the web.
+      </p>
+      <div className="tabs tabs-boxed justify-center">
+        <button
+          onClick={() => handleTabClick("car")}
+          className={`tab ${activeTab === "car" && "tab-active"}`}
+        >
+          car
+        </button>
+        <button
+          onClick={() => handleTabClick("bike")}
+          className={`tab ${activeTab === "bike" && "tab-active"}`}
+        >
+          bike
+        </button>
+        <button
+          onClick={() => handleTabClick("truck")}
+          className={`tab ${activeTab === "truck" && "tab-active"}`}
+        >
+          truck
+        </button>
+      </div>
+      <div className="grid lg:grid-cols-3 mt-10">
+        {toys.map((toy) => (
+          <SingleTab key={toy._id} toy={toy}></SingleTab>
+        ))}
+      </div>
     </div>
   );
 };

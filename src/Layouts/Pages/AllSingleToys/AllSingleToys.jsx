@@ -1,9 +1,10 @@
 import { rankings } from "match-sorter";
-import React from "react";
+import React, { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 
 const AllSingleToys = () => {
   const singleToys = useLoaderData();
+
   const {
     _id,
     rating,
@@ -16,7 +17,7 @@ const AllSingleToys = () => {
     img,
   } = singleToys;
   return (
-    <div className="card lg:card-side bg-base-100 shadow-xl mt-20">
+    <div className="card lg:card-side bg-base-100 shadow-xl mt-20 ">
       <figure>
         <img className="w-3/4 h-3/4" src={img} alt="Album" />
       </figure>

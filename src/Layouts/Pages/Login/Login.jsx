@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../../firebase/firebase.confiq";
 import { AuthContext } from "../../../provider/AuthProvider";
+import useTitle from "../../../hooks/useTitle";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -12,6 +13,8 @@ const Login = () => {
   const location = useLocation();
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
+  useTitle("Login");
+
   // const gitProvider = new GithubAuthProvider();
   console.log(location);
 
