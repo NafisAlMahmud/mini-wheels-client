@@ -32,7 +32,7 @@ const AddToys = () => {
     };
     console.log(newToys);
 
-    // send data to server
+    // send data to server and link added
     fetch("https://mini-wheels-server-nafisalmahmud.vercel.app/addToys", {
       method: "POST",
       headers: {
