@@ -2,8 +2,10 @@ import React, { useContext, useState } from "react";
 import { updateProfile } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
+import useTitle from "../../../hooks/useTitle";
 
 const Signup = () => {
+  useTitle("Signup");
   const [error, setError] = useState("");
   const { createUser } = useContext(AuthContext);
   const navigate = useNavigate();

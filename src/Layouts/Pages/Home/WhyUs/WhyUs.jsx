@@ -16,7 +16,7 @@ const WhyUs = () => {
         <div>
           <img
             className="w-2/4 h-3/4 rounded-full  mx-auto mb-4"
-            src="https://www.ringcentral.com/gb/en/blog/wp-content/uploads/2021/06/Concept-feedback-service-customer-experience-rating-1536x1229.jpg"
+            src="https://i.ibb.co/JW1HBYL/8f999c7fdd4e64338a63120cf0f331d1-removebg-preview.png"
             alt=""
           />
           <h4 className="font-semibold text-2xl">Great Service</h4>
@@ -24,7 +24,7 @@ const WhyUs = () => {
         <div data-aos="fade-down">
           <img
             className="w-2/4 h-3/4 rounded-full  mx-auto mb-4"
-            src="https://img.freepik.com/premium-vector/authentic-product-label-100-percent-authentic-product-vector-logo-badges_526569-1113.jpg?w=2000"
+            src="https://i.ibb.co/2dSsFGM/authentic-seal-removebg-preview.png"
             alt=""
           />
           <h4 className="font-semibold text-2xl">Great Service</h4>
@@ -32,10 +32,10 @@ const WhyUs = () => {
         <div data-aos="zoom-out-left">
           <img
             className="w-2/4  rounded-full  mx-auto mb-4"
-            src="https://static.vecteezy.com/system/resources/previews/005/584/216/original/fast-delivery-icon-fast-delivery-logo-free-vector.jpg"
+            src="https://i.ibb.co/886Wcgt/Fast-delivery-logo-design-vector-PNG-removebg-preview.png"
             alt=""
           />
-          <h4 className="font-semibold text-2xl">Great Service</h4>
+          <h4 className="font-semibold text-2xl">fast Delivery</h4>
         </div>
       </div>
     </div>
